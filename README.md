@@ -23,7 +23,7 @@ protected void Page_Load(object sender, EventArgs e)
 
     //實体化物件
     Student student = new Student();
-    //將實体化後的物件傳入建構式 RequestMethod分為POST和GET 不傳入時預設GET
+    //將實体化後的物件傳入建構式 RequestMethod分為POST和GET 不傳入時預設GET 並將目前的Page.Request物件傳入
     BinderByRequest Model = new BinderByRequest(student, Request, BinderByRequest.RequestMethod.post);
     //執行Binding
     Model.ModelBinding();
